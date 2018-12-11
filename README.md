@@ -1,1 +1,1 @@
-# Git-It
+# Gig-It
