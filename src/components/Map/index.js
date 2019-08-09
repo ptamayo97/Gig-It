@@ -4,9 +4,9 @@ import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 
 const style = {
 	width: '100%',
-	height: '71vh',
-	position: 'relative'
-	// top: '28px'
+	height: '90vh',
+	position: 'relative',
+	top: '28px'
 };
 
 const MAP = {
@@ -20,7 +20,7 @@ const MAP = {
 		maxZoom: 19
 	}
 };
-class ContactPage extends Component {
+class MapPage extends Component {
 	state = {
 		collapseID: '',
 		mapOptions: {
@@ -39,7 +39,7 @@ class ContactPage extends Component {
 			<MDBRow center>
 				<MDBCol lg='8'>
 					<MDBAnimation reveal type='tada'>
-						<div style={{ height: 500 }} className='z-depth-2'>
+						<div style={{ height: 500 }}>
 							{/* <GoogleMapReact defaultCenter={{ lat: 33.6681, lng: -117.3273 }} defaultZoom={7} /> */}
 
 							<Map
@@ -73,4 +73,4 @@ const LoadingContainer = (props) => <div>Fancy loading container!</div>;
 export default GoogleApiWrapper({
 	apiKey: 'AIzaSyBBdrrchiVVEcgcVy2ssar7l4Ypzz1-81I',
 	LoadingContainer: LoadingContainer
-})(ContactPage);
+})(MapPage);
