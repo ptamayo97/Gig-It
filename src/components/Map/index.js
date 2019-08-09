@@ -4,9 +4,9 @@ import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 
 const style = {
 	width: '100%',
-	height: '90vh',
+	height: '95vh',
 	position: 'relative',
-	top: '28px'
+	top: '5px'
 };
 
 const MAP = {
@@ -37,9 +37,9 @@ class MapPage extends Component {
 	render() {
 		return (
 			<MDBRow center>
-				<MDBCol lg='8'>
+				<MDBCol lg='12'>
 					<MDBAnimation reveal type='tada'>
-						<div style={{ height: 500 }}>
+						<div style={{ height: 800 }}>
 							{/* <GoogleMapReact defaultCenter={{ lat: 33.6681, lng: -117.3273 }} defaultZoom={7} /> */}
 
 							<Map
