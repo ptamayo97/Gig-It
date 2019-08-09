@@ -4,6 +4,7 @@ import './App.css';
 // import { MDBCol, MDBRow, MDBContainer } from 'mdbreact';
 // import RoutesWithNavigation from './components/RoutesWithNavigation';
 // import Home from './pages/Home';
+import NavBar from './components/NavBar/index';
 import MapPage from './components/Map/index';
 // import Bands from './pages/Bands';
 // import EventRegister from './pages/RegisterEvent';
@@ -14,6 +15,7 @@ class App extends Component {
 	render() {
 		return (
 			<div>
+				<NavBar />
 				<MapPage />
 			</div>
 		);
