@@ -3,23 +3,23 @@ import './App.css';
 import { Switch, Route } from 'react-router-dom';
 
 import RoutesWithNavigation from './components/RoutesWithNavigation';
-
-import Login from './components/pages/Login';
-import Register from './components/pages/Register';
-import About from './components/pages/About';
-import SinglePost from './components/pages/SinglePost';
-import PostListing from './components/pages/PostListing';
-import Landing from './components/pages/Landing';
+import Home from './pages/Home';
+import MapPage from './pages/MapePage';
+import Bands from './pages/Bands';
+import EventRegister from './pages/RegisterEvent';
+import Account from './pages/Account';
+import BandProfile from './pages/BandProfile';
 
 const App = () => {
 	return (
 		<Switch>
-			<Route path='/pages/login' exact component={Login} />
-			<Route path='/pages/register' exact component={Register} />
-			<Route path='/pages/about' exact component={About} />
-			<Route path='/pages/post' exact component={SinglePost} />
-			<Route path='/pages/posts' exact component={PostListing} />
-			<Route path='/pages/landing' exact component={Landing} />
+			<Route path='/pages/Home' exact component={Home} />
+			<Route path='/pages/Map' exact component={MapPage} />
+			<Route path='/pages/Bands' exact component={Bands} />
+			<Route path='/pages/RegisterEvent' exact component={EventRegister} />
+			<Route path='/pages/Account' exact component={Account} />
+			<Route path='/pages/BandProfile' exact component={BandProfile} />
+
 			<RoutesWithNavigation />
 		</Switch>
 	);
