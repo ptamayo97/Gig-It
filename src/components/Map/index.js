@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { MDBRow, MDBCol, MDBAnimation, MDBIcon } from 'mdbreact';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
-
+import MapStyles from './MapStyle.json';
 const style = {
 	width: '100%',
-	height: '95vh',
-	position: 'relative',
-	top: '5px'
+	height: '62%',
+	position: 'relative'
+	// top: '20px'
 };
 
 const MAP = {
@@ -16,7 +16,7 @@ const MAP = {
 		lng: -117.182762
 	},
 	options: {
-		// styles: MapStyles,
+		styles: MapStyles,
 		maxZoom: 19
 	}
 };
@@ -53,7 +53,7 @@ class MapPage extends Component {
 								google={this.props.google}
 								zoom={10}
 								style={style}
-								// styles={MapStyles}
+								styles={MapStyles}
 								initialCenter={{
 									lat: 32.852721,
 									lng: -117.182762
