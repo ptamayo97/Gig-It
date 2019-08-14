@@ -1,23 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDom from 'react-dom';
 import './index.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-import { Router } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
-const customHistory = createBrowserHistory();
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 
-ReactDOM.render(
-  <Router history={customHistory}>
-    <App />
-  </Router>,
-  document.getElementById('root')
+import App from './components/App';
+import reducers from './reducers';
+
+// This is how a middleware is applied
+const store = createStore(reducers, applyMiddleware(thunk));
+
+ReactDom.render(
+	<Provider store={store}>
+		<App />
+	</Provider>,
+	document.querySelector('#root')
 );
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
