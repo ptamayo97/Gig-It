@@ -1,67 +1,84 @@
 import React, { Component } from 'react';
-import { MDBRow, MDBCol, MDBAnimation, MDBIcon } from 'mdbreact';
-import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
+import { MDBRow, MDBCol, MDBAnimation } from 'mdbreact';
+import { Map, GoogleApiWrapper } from 'google-maps-react';
 import MapStyles from './MapStyle.json';
 const style = {
 	width: '100%',
-	height: '62%',
+	height: '100%',
 	position: 'relative'
 	// top: '20px'
 };
 
-const MAP = {
-	defaultZoom: 12,
-	defaultCenter: {
-		lat: 32.852721,
-		lng: -117.182762
-	},
-	options: {
-		styles: MapStyles,
-		maxZoom: 19
-	}
-};
 class MapPage extends Component {
-	state = {
-		collapseID: '',
-		mapOptions: {
-			center: MAP.defaultCenter,
-			zoom: MAP.defaultZoom
-		}
-	};
+	constructor(props) {
+		super(props);
+		this.state = {
+			collapseID: '',
+			errorMessage: '',
+			lat: null,
+			long: null
+		};
+		window.navigator.geolocation.getCurrentPosition(
+			(position) =>
+				this.setState({
+					lat: position.coords.latitude,
+					long: position.coords.longitude
+				}),
+			(err) => {
+				this.setState({
+					errorMessage: err.message
+				});
+			}
+		);
+	}
 
+	// componentDidMount() {
+	// 	this.getUserLocation();
+	// }
+
+	// getUserLocation = () => {
+	// 	window.navigator.geolocation.getCurrentPosition(
+	// 		(position) =>
+	// 			this.setState({
+	// 				lat: position.coords.latitude,
+	// 				long: position.coords.longitude
+	// 			}),
+	// 		(err) => {
+	// 			this.setState({
+	// 				errorMessage: err.message
+	// 			});
+	// 		}
+	// 	);
+	// };
 	toggleCollapse = (collapseID) => () =>
 		this.setState((prevState) => ({
 			collapseID: prevState.collapseID !== collapseID ? collapseID : ''
 		}));
 
 	render() {
+		const { lat, long } = this.state;
+		console.log(lat, long);
 		return (
 			<MDBRow center>
 				<MDBCol lg='12'>
 					<MDBAnimation reveal type='tada'>
-						<div style={{ height: 800 }}>
-							{/* <GoogleMapReact defaultCenter={{ lat: 33.6681, lng: -117.3273 }} defaultZoom={7} /> */}
-
+						<div style={{ height: 537 }}>
 							<Map
 								yesIWantToUseGoogleMapApiInternals
-								defaultZoom={MAP.defaultZoom}
-								defaultCenter={MAP.defaultCenter}
 								maxZoom={19}
-								options={MAP.options}
 								onChange={this.handleMapChange}
 								onReady={this.fetchPlaces}
 								google={this.props.google}
-								zoom={10}
+								zoom={11}
 								style={style}
 								styles={MapStyles}
 								initialCenter={{
-									lat: 32.852721,
-									lng: -117.182762
+									lat: lat,
+									lng: long
 								}}
 							/>
 						</div>
 					</MDBAnimation>
-					<br />
 				</MDBCol>
 			</MDBRow>
 		);

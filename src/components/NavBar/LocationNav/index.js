@@ -7,7 +7,7 @@ class LocationNav extends Component {
 
 	render() {
 		return (
-			<MDBRow middle className='text-center LinkNavRow z-depth-3 '>
+			<MDBRow middle className='text-center LinkNavRow z-depth-4 '>
 				<MDBCol md='5' className='offset-md-1'>
 					<h1 className='LinkTitle font-weight-bold'>
 						Location:<MDBIcon icon='map-marker-alt' />
