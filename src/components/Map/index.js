@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { MDBRow, MDBCol, MDBAnimation } from 'mdbreact';
+import { MDBRow, MDBCol } from 'mdbreact';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
 import MapStyles from './MapStyle.json';
 const style = {
@@ -32,24 +32,6 @@ class MapPage extends Component {
 		);
 	}
 
-	// componentDidMount() {
-	// 	this.getUserLocation();
-	// }
-
-	// getUserLocation = () => {
-	// 	window.navigator.geolocation.getCurrentPosition(
-	// 		(position) =>
-	// 			this.setState({
-	// 				lat: position.coords.latitude,
-	// 				long: position.coords.longitude
-	// 			}),
-	// 		(err) => {
-	// 			this.setState({
-	// 				errorMessage: err.message
-	// 			});
-	// 		}
-	// 	);
-	// };
 	toggleCollapse = (collapseID) => () =>
 		this.setState((prevState) => ({
 			collapseID: prevState.collapseID !== collapseID ? collapseID : ''
@@ -58,27 +40,32 @@ class MapPage extends Component {
 	render() {
 		const { lat, long } = this.state;
 		console.log(lat, long);
+
+		if (lat === null) {
+			return 'loading';
+		}
+		if (long === null) {
+			return 'loading';
+		}
 		return (
 			<MDBRow center>
 				<MDBCol lg='12'>
-					<MDBAnimation reveal type='tada'>
-						<div style={{ height: 537 }}>
-							<Map
-								yesIWantToUseGoogleMapApiInternals
-								maxZoom={19}
-								onChange={this.handleMapChange}
-								onReady={this.fetchPlaces}
-								google={this.props.google}
-								zoom={11}
-								style={style}
-								styles={MapStyles}
-								initialCenter={{
-									lat: lat,
-									lng: long
-								}}
-							/>
-						</div>
-					</MDBAnimation>
+					<div style={{ height: 537 }}>
+						<Map
+							yesIWantToUseGoogleMapApiInternals
+							maxZoom={19}
+							onChange={this.handleMapChange}
+							onReady={this.fetchPlaces}
+							google={this.props.google}
+							zoom={11}
+							style={style}
+							styles={MapStyles}
+							initialCenter={{
+								lat: lat,
+								lng: long
+							}}
+						/>
+					</div>
 				</MDBCol>
 			</MDBRow>
 		);
