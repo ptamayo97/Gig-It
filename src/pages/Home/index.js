@@ -30,22 +30,24 @@ class Home extends Component {
 				</MDBRow> */}
 
 				<MDBRow>
-					<MDBContainer>
+					<MDBContainer className='caro1'>
 						<MDBCarousel
 							activeItem={1}
 							length={3}
 							slide={true}
 							showControls={true}
-							showIndicators={true}
+							showIndicators={false}
 							multiItem>
 							<MDBRow>
 								<MDBCol sm='8' start='true'>
-									<h1>
-										<MDBIcon icon='music' />Featured Bands
+									<h1 className='font-weight-bold'>
+										<MDBIcon icon='music' /> Featured Bands
 									</h1>
 								</MDBCol>
 								<MDBCol sm='4' end='true'>
-									<MDBBtn color='white'>See All</MDBBtn>
+									<MDBBtn className='font-weight-bold' color='white'>
+										See All
+									</MDBBtn>
 								</MDBCol>
 							</MDBRow>
 							<MDBCarouselInner>
@@ -63,25 +65,25 @@ class Home extends Component {
 							</MDBCarouselInner>
 						</MDBCarousel>
 					</MDBContainer>
-				</MDBRow>
 
-				<MDBRow>
-					<MDBContainer>
+					<MDBContainer className='caro2'>
 						<MDBCarousel
 							activeItem={1}
 							length={3}
 							slide={true}
 							showControls={true}
-							showIndicators={true}
+							showIndicators={false}
 							multiItem>
 							<MDBRow>
 								<MDBCol sm='8' start='true'>
-									<h1>
-										<MDBIcon icon='music' />Upcoming Events
+									<h1 className='font-weight-bold'>
+										<MDBIcon icon='music' /> Upcoming Events
 									</h1>
 								</MDBCol>
 								<MDBCol sm='4' end='true'>
-									<MDBBtn color='white'>See All</MDBBtn>
+									<MDBBtn color='white' className='font-weight-bold'>
+										See All
+									</MDBBtn>
 								</MDBCol>
 							</MDBRow>
 							<MDBCarouselInner>

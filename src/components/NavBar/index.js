@@ -23,7 +23,7 @@ class NavbarPage extends Component {
 					<MDBCol className='Title' sm='1'>
 						<Link to='/'>
 							{' '}
-							<h1 className='font-weight-bold'>Gig It</h1>
+							<h1 className='font-weight-bold deep-purple-text'>Gig It</h1>
 						</Link>
 					</MDBCol>
 
