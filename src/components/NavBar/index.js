@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './style.css';
-import { MDBCol, MDBRow, MDBContainer, MDBNavbar, MDBNavbarBrand, MDBIcon, MDBBtn } from 'mdbreact';
+import { MDBCol, MDBNavbar } from 'mdbreact';
 import LinkNav from './LinkNav/index';
 import { Link } from 'react-router-dom';
-import LocationNav from './LocationNav/index';
-import SignedInLinks from './signInLinks';
+// import LocationNav from './LocationNav/index';
+// import SignedInLinks from './signInLinks';
 import SignedOutLinks from './signOutLinks';
 class NavbarPage extends Component {
 	state = {

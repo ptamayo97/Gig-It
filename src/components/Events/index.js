@@ -8,8 +8,8 @@ import {
 	MDBCardText,
 	MDBRow,
 	MDBCol,
-	MDBIcon,
-	MDBCarouselItem
+	MDBIcon
+	// MDBCarouselItem
 } from 'mdbreact';
 
 class EventCard extends Component {
@@ -25,7 +25,7 @@ class EventCard extends Component {
 		};
 	}
 	render() {
-		const { bandImage, bandName, eventSummary, eventDate, amountOfEventComments, amountOfEventCheckIns } = this.state;
+		// const { bandImage, bandName, eventSummary, eventDate, amountOfEventComments, amountOfEventCheckIns } = this.state;
 		return (
 			<MDBRow>
 				{/* <MDBCol md='3'>

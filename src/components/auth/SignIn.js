@@ -69,7 +69,7 @@ class SignIn extends Component {
 									<MDBRow className='d-flex align-items-center mb-4 mt-5'>
 										<MDBCol md='5' className='d-flex align-items-start'>
 											<div className='text-center'>
-												<MDBBtn color='grey' rounded type='button' type='submit' className='z-depth-1a'>
+												<MDBBtn color='grey' rounded type='submit' className='z-depth-1a'>
 													Log in
 												</MDBBtn>
 											</div>

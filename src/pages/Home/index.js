@@ -16,18 +16,53 @@ class Home extends Component {
 	render() {
 		return (
 			<MDBContainer>
-				<MDBRow>
-					<MDBCol sm='3' start>
-						<MDBIcon icon='music' />Featured Bands
+				{/* <MDBRow>
+					<MDBCol sm='6' start='true'>
+						<h1>
+							<MDBIcon icon='music' />Featured Bands
+						</h1>
 					</MDBCol>
-					<MDBCol sm='3' end>
+					<MDBCol sm='6' end='true'>
 						<MDBBtn color='white'>
 							<MDBIcon icon='magic' className='mr-1' /> See All
 						</MDBBtn>
 					</MDBCol>
-					<MDBCol sm='3' end>
-						Featured Bands
-					</MDBCol>
+				</MDBRow> */}
+
+				<MDBRow>
+					<MDBContainer>
+						<MDBCarousel
+							activeItem={1}
+							length={3}
+							slide={true}
+							showControls={true}
+							showIndicators={true}
+							multiItem>
+							<MDBRow>
+								<MDBCol sm='8' start='true'>
+									<h1>
+										<MDBIcon icon='music' />Featured Bands
+									</h1>
+								</MDBCol>
+								<MDBCol sm='4' end='true'>
+									<MDBBtn color='white'>See All</MDBBtn>
+								</MDBCol>
+							</MDBRow>
+							<MDBCarouselInner>
+								<MDBRow>
+									<MDBCarouselItem itemId='1'>
+										<Event />
+									</MDBCarouselItem>
+									<MDBCarouselItem itemId='2'>
+										<Event />
+									</MDBCarouselItem>
+									<MDBCarouselItem itemId='3'>
+										<Event />
+									</MDBCarouselItem>
+								</MDBRow>
+							</MDBCarouselInner>
+						</MDBCarousel>
+					</MDBContainer>
 				</MDBRow>
 
 				<MDBRow>
@@ -39,6 +74,16 @@ class Home extends Component {
 							showControls={true}
 							showIndicators={true}
 							multiItem>
+							<MDBRow>
+								<MDBCol sm='8' start='true'>
+									<h1>
+										<MDBIcon icon='music' />Upcoming Events
+									</h1>
+								</MDBCol>
+								<MDBCol sm='4' end='true'>
+									<MDBBtn color='white'>See All</MDBBtn>
+								</MDBCol>
+							</MDBRow>
 							<MDBCarouselInner>
 								<MDBRow>
 									<MDBCarouselItem itemId='1'>

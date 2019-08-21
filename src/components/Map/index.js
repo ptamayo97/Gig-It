@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { MDBRow, MDBCol } from 'mdbreact';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
 import MapStyles from './MapStyle.json';
+import NightStyle from './NightStyle.json';
 const style = {
-	width: '100%',
+	width: '99%',
 	height: '100%',
 	position: 'relative'
 	// top: '20px'
@@ -15,8 +16,8 @@ class MapPage extends Component {
 		this.state = {
 			collapseID: '',
 			errorMessage: '',
-			lat: null,
-			long: null
+			lat: 32.7157,
+			long: -117.1611
 		};
 		window.navigator.geolocation.getCurrentPosition(
 			(position) =>
@@ -41,10 +42,7 @@ class MapPage extends Component {
 		const { lat, long } = this.state;
 		console.log(lat, long);
 
-		if (lat === null) {
-			return 'loading';
-		}
-		if (long === null) {
+		if (lat === null && long === null) {
 			return 'loading';
 		}
 		return (
@@ -59,7 +57,7 @@ class MapPage extends Component {
 							google={this.props.google}
 							zoom={11}
 							style={style}
-							styles={MapStyles}
+							styles={NightStyle}
 							initialCenter={{
 								lat: lat,
 								lng: long
