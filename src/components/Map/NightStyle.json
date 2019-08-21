@@ -126,24 +126,6 @@
 		]
 	},
 	{
-		"featureType": "poi.school",
-		"elementType": "geometry.fill",
-		"stylers": [
-			{
-				"color": "#ff8080"
-			}
-		]
-	},
-	{
-		"featureType": "poi.sports_complex",
-		"elementType": "geometry.fill",
-		"stylers": [
-			{
-				"color": "#ff9c6c"
-			}
-		]
-	},
-	{
 		"featureType": "road",
 		"elementType": "geometry",
 		"stylers": [
@@ -175,7 +157,16 @@
 		"elementType": "geometry.fill",
 		"stylers": [
 			{
-				"color": "#d19dfd"
+				"color": "#b0b0b0"
+			}
+		]
+	},
+	{
+		"featureType": "road.arterial",
+		"elementType": "labels.text.fill",
+		"stylers": [
+			{
+				"color": "#ffffff"
 			}
 		]
 	},
@@ -193,7 +184,10 @@
 		"elementType": "geometry.fill",
 		"stylers": [
 			{
-				"color": "#00c851"
+				"color": "#005522"
+			},
+			{
+				"weight": 3
 			}
 		]
 	},
@@ -202,7 +196,7 @@
 		"elementType": "geometry.stroke",
 		"stylers": [
 			{
-				"color": "#ce93d8"
+				"color": "#d7a8df"
 			},
 			{
 				"weight": 1
@@ -232,7 +226,7 @@
 		"elementType": "geometry.fill",
 		"stylers": [
 			{
-				"color": "#ce93d8"
+				"color": "#ad4bbe"
 			}
 		]
 	},
@@ -241,10 +235,19 @@
 		"elementType": "geometry.stroke",
 		"stylers": [
 			{
-				"color": "#00c851"
+				"weight": 1
+			}
+		]
+	},
+	{
+		"featureType": "road.local",
+		"elementType": "labels.text",
+		"stylers": [
+			{
+				"color": "#ffffff"
 			},
 			{
-				"weight": 1
+				"weight": 0.5
 			}
 		]
 	},
