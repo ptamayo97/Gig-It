@@ -4,3 +4,14 @@
 	position: relative;
 	top: 70px;
 }
+.carousel-multi-item .controls-top .btn-floating {
+	background: #9933cc;
+}
+.caro2 {
+	position: relative;
+	bottom: 155px;
+}
+.caro1 {
+	position: relative;
+	bottom: 60px;
+}
