@@ -10,6 +10,14 @@ const style = {
 	// top: '20px'
 };
 
+const SpinnerPage = () => {
+	return (
+		<div className='spinner-grow purple-text' role='status'>
+			<span className='sr-only'>Loading...</span>
+		</div>
+	);
+};
+
 class MapPage extends Component {
 	constructor(props) {
 		super(props);
@@ -32,6 +40,13 @@ class MapPage extends Component {
 			}
 		);
 	}
+	SpinnerPage = () => {
+		return (
+			<div className='spinner-grow purple-text' role='status'>
+				<span className='sr-only'>Loading...</span>
+			</div>
+		);
+	};
 
 	toggleCollapse = (collapseID) => () =>
 		this.setState((prevState) => ({
@@ -43,7 +58,7 @@ class MapPage extends Component {
 		console.log(lat, long);
 
 		if (lat === null && long === null) {
-			return 'loading';
+			return SpinnerPage();
 		}
 		return (
 			<MDBRow center>
@@ -74,5 +89,5 @@ const LoadingContainer = (props) => <div>Fancy loading container!</div>;
 
 export default GoogleApiWrapper({
 	apiKey: 'AIzaSyBBdrrchiVVEcgcVy2ssar7l4Ypzz1-81I',
-	LoadingContainer: LoadingContainer
+	LoadingContainer: SpinnerPage
 })(MapPage);
