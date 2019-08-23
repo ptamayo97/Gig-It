@@ -4,8 +4,8 @@ import { MDBCol, MDBNavbar } from 'mdbreact';
 import LinkNav from './LinkNav/index';
 import { Link } from 'react-router-dom';
 // import LocationNav from './LocationNav/index';
-// import SignedInLinks from './signInLinks';
-import SignedOutLinks from './signOutLinks';
+import SignedInLinks from './signInLinks';
+// import SignedOutLinks from './signOutLinks';
 class NavbarPage extends Component {
 	state = {
 		collapseID: ''
@@ -28,8 +28,8 @@ class NavbarPage extends Component {
 					</MDBCol>
 
 					<MDBCol sm='11'>
-						<SignedOutLinks />
-						{/* <SignedInLinks /> */}
+						{/* <SignedOutLinks /> */}
+						<SignedInLinks />
 					</MDBCol>
 				</MDBNavbar>
 				<LinkNav />

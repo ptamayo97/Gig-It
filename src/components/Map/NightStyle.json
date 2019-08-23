@@ -184,10 +184,10 @@
 		"elementType": "geometry.fill",
 		"stylers": [
 			{
-				"color": "#005522"
+				"color": "#00c851"
 			},
 			{
-				"weight": 3
+				"weight": 1.25
 			}
 		]
 	},

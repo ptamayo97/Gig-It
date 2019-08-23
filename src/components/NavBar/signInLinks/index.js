@@ -58,10 +58,10 @@ class SignedInLinks extends Component {
 								<NavLink to='/'>Sign Out</NavLink>
 							</MDBDropdownItem>
 							<MDBDropdownItem>
-								<NavLink to='/'>Create Event</NavLink>
+								<NavLink to='/creategig'>Create Event</NavLink>
 							</MDBDropdownItem>
 							<MDBDropdownItem>
-								<NavLink to='/'>Account</NavLink>
+								<NavLink to='/profile'>Account</NavLink>
 							</MDBDropdownItem>
 							{/* <MDBDropdownItem> */}
 							<MDBCollapseHeader onClick={this.toggleCollapse('collapse1')}>
