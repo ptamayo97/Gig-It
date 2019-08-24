@@ -5,6 +5,8 @@ import MapPage from './Map';
 import Home from '../pages/Home';
 import SignIn from './auth/SignIn';
 import SignUp from './auth/SignUp';
+import CreateEvent from './Forms/EventRegister';
+import UserProfile from './Profiles/User';
 // import EventProfile from '../components/Profiles/Event';
 const App = () => {
 	return (
@@ -16,6 +18,9 @@ const App = () => {
 					<Route path='/map' component={MapPage} />
 					<Route path='/signin' component={SignIn} />
 					<Route path='/signup' component={SignUp} />
+					<Route path='/creategig' component={CreateEvent} />
+					<Route path='/profile' component={UserProfile} />
+
 					{/* <Route path='/project/:id' component={EventProfile} /> */}
 				</Switch>
 			</div>

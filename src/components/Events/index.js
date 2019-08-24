@@ -12,6 +12,7 @@ import {
 	// MDBCarouselItem
 } from 'mdbreact';
 
+import './style.css';
 class EventCard extends Component {
 	constructor(props) {
 		super(props);
@@ -24,6 +25,7 @@ class EventCard extends Component {
 			amountOfEventCheckIns: this.props.amountOfEventCheckIns
 		};
 	}
+
 	render() {
 		// const { bandImage, bandName, eventSummary, eventDate, amountOfEventComments, amountOfEventCheckIns } = this.state;
 		return (
@@ -31,14 +33,14 @@ class EventCard extends Component {
 				{/* <MDBCol md='3'>
 						<MDBCard cascade>
 							<MDBCardImage cascade className='img-fluid' src={bandImage} />
-							<MDBBtn floating tag='a' className='ml-auto mr-4 lighten-3 mdb-coalor' action>
+							<MDBBtn floating tag='a' className='ml-auto mr-4 eventLinks' color='fake' action>
 								<MDBIcon icon='chevron-right' />
 							</MDBBtn>
 							<MDBCardBody cascade>
 								<MDBCardTitle>{bandName}</MDBCardTitle>
 								<MDBCardText>{eventSummary}</MDBCardText>
 							</MDBCardBody>
-							<div className='rounded-bottom mdb-color lighten-3 text-center pt-3'>
+							<div className='rounded-bottom eventActionCenter text-center pt-3'>
 								<ul className='list-unstyled list-inline font-small'>
 									<li className='list-inline-item pr-2 white-text'>
 										<MDBIcon far icon='clock' /> {eventDate}
@@ -67,7 +69,7 @@ class EventCard extends Component {
 							className='img-fluid'
 							src='https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%282%29.jpg'
 						/>
-						<MDBBtn floating tag='a' className='ml-auto mr-4 lighten-3 mdb-coalor' action>
+						<MDBBtn floating tag='a' className='ml-auto mr-4 eventLinks' color='fake' action>
 							<MDBIcon icon='chevron-right' />
 						</MDBBtn>
 						<MDBCardBody cascade>
@@ -76,7 +78,7 @@ class EventCard extends Component {
 								Some quick example text to build on the card title and make up the bulk of the card's content.
 							</MDBCardText>
 						</MDBCardBody>
-						<div className='rounded-bottom mdb-color lighten-3 text-center pt-3'>
+						<div className='rounded-bottom eventActionCenter text-center pt-3'>
 							<ul className='list-unstyled list-inline font-small'>
 								<li className='list-inline-item pr-2 white-text'>
 									<MDBIcon far icon='clock' /> 05/10/2015
@@ -113,7 +115,7 @@ class EventCard extends Component {
 							className='img-fluid'
 							src='https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%282%29.jpg'
 						/>
-						<MDBBtn floating tag='a' className='ml-auto mr-4 lighten-3 mdb-coalor' action>
+						<MDBBtn floating tag='a' className='ml-auto mr-4 eventLinks' color='fake' action>
 							<MDBIcon icon='chevron-right' />
 						</MDBBtn>
 						<MDBCardBody cascade>
@@ -122,7 +124,7 @@ class EventCard extends Component {
 								Some quick example text to build on the card title and make up the bulk of the card's content.
 							</MDBCardText>
 						</MDBCardBody>
-						<div className='rounded-bottom mdb-color lighten-3 text-center pt-3'>
+						<div className='rounded-bottom eventActionCenter text-center pt-3'>
 							<ul className='list-unstyled list-inline font-small'>
 								<li className='list-inline-item pr-2 white-text'>
 									<MDBIcon far icon='clock' /> 05/10/2015
@@ -159,7 +161,7 @@ class EventCard extends Component {
 							className='img-fluid'
 							src='https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%282%29.jpg'
 						/>
-						<MDBBtn floating tag='a' className='ml-auto mr-4 lighten-3 mdb-coalor' action>
+						<MDBBtn floating tag='a' className='ml-auto mr-4 eventLinks' color='fake' action>
 							<MDBIcon icon='chevron-right' />
 						</MDBBtn>
 						<MDBCardBody cascade>
@@ -168,7 +170,7 @@ class EventCard extends Component {
 								Some quick example text to build on the card title and make up the bulk of the card's content.
 							</MDBCardText>
 						</MDBCardBody>
-						<div className='rounded-bottom mdb-color lighten-3 text-center pt-3'>
+						<div className='rounded-bottom eventActionCenter text-center pt-3'>
 							<ul className='list-unstyled list-inline font-small'>
 								<li className='list-inline-item pr-2 white-text'>
 									<MDBIcon far icon='clock' /> 05/10/2015
@@ -205,7 +207,7 @@ class EventCard extends Component {
 							className='img-fluid'
 							src='https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20%282%29.jpg'
 						/>
-						<MDBBtn floating tag='a' className='ml-auto mr-4 lighten-3 mdb-coalor' action>
+						<MDBBtn floating tag='a' className='ml-auto mr-4 eventLinks' color='fake' action>
 							<MDBIcon icon='chevron-right' />
 						</MDBBtn>
 						<MDBCardBody cascade>
@@ -214,7 +216,7 @@ class EventCard extends Component {
 								Some quick example text to build on the card title and make up the bulk of the card's content.
 							</MDBCardText>
 						</MDBCardBody>
-						<div className='rounded-bottom mdb-color lighten-3 text-center pt-3'>
+						<div className='rounded-bottom eventActionCenter text-center pt-3'>
 							<ul className='list-unstyled list-inline font-small'>
 								<li className='list-inline-item pr-2 white-text'>
 									<MDBIcon far icon='clock' /> 05/10/2015

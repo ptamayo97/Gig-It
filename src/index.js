@@ -9,7 +9,7 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
 import App from './components/App';
-import reducers from './reducers';
+import reducers from './store/reducers';
 
 // This is how a middleware is applied
 const store = createStore(reducers, applyMiddleware(thunk));
