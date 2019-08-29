@@ -16,6 +16,9 @@ const App = () => {
 					<Route path='/map' component={MapPage} />
 					<Route path='/signin' component={SignIn} />
 					<Route path='/signup' component={SignUp} />
+					{/* <Route path='/creategig' component={CreateEvent} />
+					<Route path='/profile' component={UserProfile} /> */}
+
 					{/* <Route path='/project/:id' component={EventProfile} /> */}
 				</Switch>
 			</div>
