@@ -4,10 +4,15 @@ import { MDBCol, MDBNavbar } from "mdbreact";
 import LinkNav from "./LinkNav/index";
 import { Link } from "react-router-dom";
 // import LocationNav from './LocationNav/index';
+<<<<<<< HEAD
 import SignedInLinks from "./signInLinks";
 import SignedOutLinks from "./signOutLinks";
 import { connect } from "react-redux";
 
+=======
+import SignedInLinks from './signInLinks';
+// import SignedOutLinks from './signOutLinks';
+>>>>>>> origin
 class NavbarPage extends Component {
   state = {
     collapseID: ""
@@ -42,6 +47,7 @@ class NavbarPage extends Component {
             </Link>
           </MDBCol>
 
+<<<<<<< HEAD
           <MDBCol sm='11'>{links}</MDBCol>
         </MDBNavbar>
         <LinkNav />
@@ -49,6 +55,18 @@ class NavbarPage extends Component {
       </div>
     );
   }
+=======
+					<MDBCol sm='11'>
+						{/* <SignedOutLinks /> */}
+						<SignedInLinks />
+					</MDBCol>
+				</MDBNavbar>
+				<LinkNav />
+				{/* <LocationNav /> */}
+			</div>
+		);
+	}
+>>>>>>> origin
 }
 
 const mapStateToProps = state => {
