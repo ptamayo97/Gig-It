@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import NavBar from './NavBar';
-import MapPage from './Map';
-import Home from '../pages/Home';
-import SignIn from './auth/SignIn';
-import SignUp from './auth/SignUp';
+import NavBar from './components/NavBar';
+import MapPage from './components/Map';
+import Home from './pages/Home';
+import SignIn from './components/auth/SignIn';
+import SignUp from './components/auth/SignUp';
 // import EventProfile from '../components/Profiles/Event';
 const App = () => {
 	return (
