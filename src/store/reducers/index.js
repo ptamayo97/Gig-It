@@ -1,6 +1,7 @@
 import { combineReducers } from 'redux';
-import eventReducer from './eventReducer';
-
+import postsReducer from './postsReducer';
+import usersReducer from './usersReducer';
 export default combineReducers({
-	events: eventReducer
+	posts: postsReducer,
+	users: usersReducer
 });

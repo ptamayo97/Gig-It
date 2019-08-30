@@ -1,4 +1,4 @@
-import jsonPlaceholder from '../apis/jsonPlaceholder';
+import jsonPlaceholder from '../../apis/jsonPlaceholder';
 import _ from 'lodash';
 
 /**Call action creator that returns the inner function */
